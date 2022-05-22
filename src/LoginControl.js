@@ -1,7 +1,21 @@
 import React from 'react';
 
-function Greeting(props) {
+function UserGreeting () {
+    return <h2>Welcome User</h2>
+}
 
+function GuestGreeting () {
+    return <h2>Welcome Guest</h2>
+}
+
+function Greeting(props) {
+    const isLoggedIn = props.isLoggedIn;
+
+    if (isLoggedIn) {
+        return <UserGreeting />
+    } else {
+        return <GuestGreeting />
+    }
 }
 
 function LoginButton(props) {
@@ -36,19 +50,21 @@ class LoginControl extends React.Component {
 
     render() {
 
-        const isLoggedIn = this.props.isLoggedIn;
+        const isLoggedIn = this.state.isLoggedIn;
         
         let button;
 
         if (isLoggedIn) {
-            button = <LoginButton onClck={this.handleLogout} />
+            button = <LogoutButton onClick={this.handleLogout} />
         } else {
-            button = <LogoutButton onClck={this.handleLogin} />
+            button = <LoginButton onClick={this.handleLogin} />
         }
 
         return (
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
+                <h1>hello world</h1>
+                {button}
             </div>
         )
     }
