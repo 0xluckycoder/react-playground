@@ -1,3 +1,103 @@
+// continue from here - https://reactjs.org/docs/lifting-state-up.html
+
+import React from "react";
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="app-wrapper">
+        <h1>navigation bar</h1>
+      </div>
+    )
+  }
+}
+
+/*
+// Forms
+import React from "react";
+import Form from "./Components/Form.js"
+
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="app-wrapper">
+        <h1>navigation bar</h1>
+        <Form />
+      </div>
+    )
+  }
+}
+
+
+// List and keys
+import React from "react";
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const numbers = [1, 2, 3, 4, 5];
+
+    const listItems = numbers.map((number) => <li key={number.toString()}>{number}</li>);
+    return (
+      <div className="app-wrapper">
+        <h1>navigation bar</h1>
+        <ul>{listItems}</ul>
+      </div>
+    )
+  }
+}
+
+// conditionally hide component 
+import React from "react";
+import Page from './Components/Page';
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="app-wrapper">
+        <h1>navigation bar</h1>
+        <Page />
+      </div>
+    )
+  }
+}
+
+// mailbox 
+import React from "react";
+import Mailbox from './Mailbox';
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="app-wrapper">
+        <h1>hello</h1>
+        <Mailbox count={5} />
+      </div>
+    )
+  }
+}
+
+// login control
 import React from "react";
 import LoginControl from './LoginControl';
 
@@ -15,7 +115,6 @@ export default class App extends React.Component {
   }
 }
 
-/*
 // conditional rendering 
 function UserGreeting() {
   return <h1>Hello User</h1>
