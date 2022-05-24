@@ -1,6 +1,5 @@
-// continue from here - https://reactjs.org/docs/lifting-state-up.html
-
 import React from "react";
+import Calculator from './Components/Calculator.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -11,6 +10,7 @@ export default class App extends React.Component {
     return (
       <div className="app-wrapper">
         <h1>navigation bar</h1>
+        <Calculator />
       </div>
     )
   }
