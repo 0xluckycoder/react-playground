@@ -1,4 +1,65 @@
 import React from "react";
+import Useeffect from './Components/Hooks/Useeffect.js';
+
+// https://reactjs.org/docs/hooks-effect.html
+
+export default function App() {
+  
+  return (
+    <div>
+      <Useeffect />
+    </div> 
+  )
+}
+
+/*
+import React, { useState } from "react";
+import Usestate from './Components/Hooks/Usestate.js';
+
+export default function App() {
+  
+  return (
+    <div>
+      <Usestate />
+    </div> 
+  )
+}
+
+
+import React from "react";
+
+function App() {
+  return (
+    <div>
+      <WelcomeDialog />
+    </div>
+  );
+}
+
+function FancyBorder(props) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+}
+
+function WelcomeDialog() {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">Welcome</h1>
+      <p className="Dialog-message">
+        Thank you for visiting our spacecraft!
+      </p>
+    </FancyBorder>
+  )
+}
+
+export default App;
+
+
+// lifting state
+import React from "react";
 import Calculator from './Components/Calculator.js';
 
 export default class App extends React.Component {
@@ -16,7 +77,6 @@ export default class App extends React.Component {
   }
 }
 
-/*
 // Forms
 import React from "react";
 import Form from "./Components/Form.js"
