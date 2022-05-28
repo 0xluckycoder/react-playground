@@ -7,7 +7,7 @@ export default function Usestate() {
     return (
         <div>
             <p>You Clicked {count} times</p>
-            <button onClick={() => setcount(count + 1)}>
+            <button onClick={() => setcount(prevCount => prevCount + 1)}>
                 Click me
             </button>
         </div>

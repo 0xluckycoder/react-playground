@@ -1,7 +1,18 @@
 import React from "react";
-import Useeffect from './Components/Hooks/Useeffect.js';
+import UseContextHook from './Components/Hooks/UseContextHook';
 
-// https://reactjs.org/docs/hooks-effect.html
+export default function App() {
+  
+  return (
+    <div>
+      <UseContextHook />
+    </div> 
+  )
+}
+
+/*
+import React from "react";
+import Useeffect from './Components/Hooks/Useeffect.js';
 
 export default function App() {
   
@@ -12,7 +23,6 @@ export default function App() {
   )
 }
 
-/*
 import React, { useState } from "react";
 import Usestate from './Components/Hooks/Usestate.js';
 
